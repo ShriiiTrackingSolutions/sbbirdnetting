@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="image/Favicon-192x192.png" />
+    <title>SB Bird Netting Solution |</title>
+    <script
+      src="https://kit.fontawesome.com/52ca9e0df4.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="miniheader">
+        <div class="container">
+          <div class="row">
+            <div class="col-auto">
+              <a target="_blank" href="https://maps.app.goo.gl/vhHbwW5hD1jDR5NX7"><i class="fa-solid fa-location-dot"></i> Maruti Nandan Complex, Vadodara</a>
+            </div>
+            <div class="col-auto">
+              <a target="_blank" href="tel:+91 9081062820"><i class="fa-solid fa-phone"></i> +91 90810 62820</a>
+            </div>
+            <div class="col-auto">
+              <a target="_blank" href="mailto:sbbirdnetting@gmail.com"><i class="fa-solid fa-envelope"></i> sbbirdnetting@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="copyrightSection">
+      <div class="container">
+        <p class="text-center">
+          copyright © 2024 SB Bird Netting Solution - All Rights Reserved ||
+          Developed & Maintained by Shriii
+        </p>
+      </div>
+    </section>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      //  Header script
+
+      window.addEventListener("scroll", function () {
+        const header = document.getElementById("main-header");
+        const headerOffset = header.offsetTop;
+        const headerHeight = header.offsetHeight;
+        const belowContent = document.getElementById("headBelowContent");
+        const belowContentOffset = belowContent.offsetTop;
+        const belowContentHeight = belowContent.offsetHeight;
+
+        if (window.pageYOffset > headerOffset + headerHeight + 5) {
+          header.classList.add("sticky-header", "visible");
+          header.classList.remove("headerAnimate");
+          if (window.matchMedia("(max-device-width:991.98px)").matches) {
+            document
+              .getElementById("navbarSupportedContent")
+              .setAttribute(
+                "style",
+                "max-height: calc(100vh - 112px); overflow-y: auto;"
+              );
+          } else {
+            if (window.matchMedia("(max-device-width:1199.98px)").matches) {
+              document
+                .getElementById("navbarSupportedContent")
+                .setAttribute("style", "");
+            }
+          }
+        } else {
+          if (
+            window.pageYOffset <
+            belowContentOffset + belowContentHeight + 4
+          ) {
+            header.classList.remove("sticky-header", "visible");
+            header.classList.add("headerAnimate");
+          }
+        }
+      });
+    </script>
+
+    <script>
+      const prevBtn = `<i class="fa-solid fa-arrow-left"></i> Prev`;
+      const nextBtn = `Next <i class="fa-solid fa-arrow-right"></i>`;
+
+      $("#ca1").owlCarousel({
+        loop: true,
+        margin: 0,
+        nav: true,
+        dots: false,
+        autoplay: true,
+        navText: [prevBtn, nextBtn],
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        responsive: {
+          0: {
+            items: 1,
+          },
+          600: {
+            items: 1,
+          },
+          1000: {
+            items: 1,
+          },
+        },
+      });
+
+      // increasing number animation start
+
+      let countersStarted = [false, false, false];
+      const targets = [100, 100, 100]; // Targets for each counter
+      const durations = [3000, 3000, 3000]; // Duration for each counter
+
+      const startCounter = (index) => {
+        let count = 0;
+        const target = targets[index];
+        const duration = durations[index];
+        const incrementTime = Math.floor(duration / target);
+        const counterDisplay = document.getElementById(`counter-${index + 1}`);
+
+        const interval = setInterval(() => {
+          count++;
+          counterDisplay.textContent = count;
+
+          if (count === target) {
+            clearInterval(interval);
+          }
+        }, incrementTime);
+      };
+
+      const onScroll = () => {
+        for (let i = 0; i < countersStarted.length; i++) {
+          const counterSection = document.getElementById(
+            `counter-section-${i + 1}`
+          );
+          const sectionPosition = counterSection.getBoundingClientRect().top;
+
+          // Check if the section is in view
+          if (sectionPosition < window.innerHeight && !countersStarted[i]) {
+            countersStarted[i] = true; // Prevent multiple counts
+            startCounter(i);
+          }
+        }
+      };
+
+      // Add event listener for scroll
+      window.addEventListener("scroll", onScroll);
+
+      // Initial check in case the user refreshes and the sections are already in view
+      window.addEventListener("load", onScroll);
+
+      // increasing number animation end
+    </script>
+  </body>
+</html>
