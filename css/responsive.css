@@ -23,6 +23,16 @@
   font-size: 36px;
 }
 
+.makingAnImpact .container{
+  position: static;
+  transform: none;
+}
+.buildingTrust .container>.row{
+  row-gap: 10px;
+}
+.buildingTrust .Paramargin {
+  width: 100%;
+}
  }
 
 @media (max-width: 991.98px) { 
@@ -34,6 +44,9 @@
 }
 .copyrightSection ul{
   justify-content: center;
+}
+.whywChooseUs .container>.row{
+  row-gap: 24px;
 }
 
  }
@@ -59,6 +72,9 @@
 .fourthH {
   font-size: 18px;
   font-weight: 600;
+}
+.premiumServices .container>.row{
+  row-gap: 40px;
 }
 
  }

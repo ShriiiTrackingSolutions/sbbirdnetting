@@ -1,50 +1,50 @@
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/Montserrat-Regular.woff2') format('woff2'),
-      url('../fonts/Montserrat-Regular.woff') format('woff');
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.woff2") format("woff2"),
+    url("../fonts/Montserrat-Regular.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/Montserrat-Medium.woff2') format('woff2'),
-      url('../fonts/Montserrat-Medium.woff') format('woff');
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Medium.woff2") format("woff2"),
+    url("../fonts/Montserrat-Medium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/Montserrat-Bold.woff2') format('woff2'),
-      url('../fonts/Montserrat-Bold.woff') format('woff');
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.woff2") format("woff2"),
+    url("../fonts/Montserrat-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Montserrat';
-  src: url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
-      url('../fonts/Montserrat-SemiBold.woff') format('woff');
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"),
+    url("../fonts/Montserrat-SemiBold.woff") format("woff");
   font-weight: 600;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans.woff2') format('woff2'),
-      url('../fonts/OpenSans.woff') format('woff');
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans.woff2") format("woff2"),
+    url("../fonts/OpenSans.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
 :root {
-  --blue:#150b89;
+  --blue: #150b89;
   --darkPerple: #4c355d;
   --perple: #4c48e3f5;
   --Black: #1f1f1f;
@@ -54,8 +54,8 @@
   --BgBlack: #0b0301;
   --skyblue: #0c71c3;
   --pink: #ea2c59;
+  --animate-delay: 0.5s;
 }
-
 
 * {
   box-sizing: border-box;
@@ -63,9 +63,10 @@
 body {
   margin: 0;
   color: var(--grey);
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-weight: normal;
   line-height: 29.6px;
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -78,41 +79,48 @@ img {
 }
 
 .display-3 {
-  font-family: 'Montserrat';
-  color: white;
-  font-size: 75px;
+  text-align: center;
+  font-family: "Montserrat";
+  color: var(--BgBlack);
+  font-size: 46px;
   font-weight: 300;
   margin-bottom: 20px;
-  line-height: 1.2em;
+  line-height: 46px;
 }
 
 .secH {
-    font-family: 'Montserrat';
-  font-size: 45px;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
+  text-align: center;
+  color: var(--BgBlack);
+  font-family: "Montserrat";
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 50px;
   margin-bottom: 40px;
 }
 
-
 .therdH {
-    font-family: 'Montserrat';
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1.2;
+  text-align: center;
+  color: var(--BgBlack);
+  font-family: "Montserrat";
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 39px;
   margin: 0 0 20px;
-  letter-spacing: -0.02em;
 }
 
 .fourthH {
-  font-family: 'Montserrat';
+  text-align: center;
+  color: var(--BgBlack);
+  font-family: "Open Sans";
   font-size: 20px;
-  font-weight: bold;
+  font-weight: 500;
   text-transform: capitalize;
-  line-height: 1.4;
+  line-height: 34px;
 }
 .fifthH {
-  font-family: "Manrope";
+  text-align: center;
+  color: var(--BgBlack);
+  font-family: "Open Sans";
   font-size: 18px;
   font-weight: bold;
   text-transform: capitalize;
@@ -134,17 +142,15 @@ img {
 .miniheader .col-auto a:hover {
   color: var(--green);
 }
-.miniheader .col-auto a i{
+.miniheader .col-auto a i {
   margin-right: 10px;
   font-size: 18px;
   vertical-align: middle;
 }
 
-.miniheader .container>.row{
+.miniheader .container > .row {
   justify-content: space-between;
 }
-
-
 
 /* Initial header styling */
 #main-header {
@@ -190,102 +196,66 @@ img {
 
 .navbar-brand {
   margin-right: 45px;
-  width: 10rem;
+  width: 150px;
 }
 
-.nav-link,
-.dropdown-item {
-  font-family: "Manrope";
-  font-size: 18px;
-  font-weight: bold;
-  text-transform: capitalize;
-  line-height: 1.4;
-  color: var(--Black);
-}
 .dropdown-menu li {
   width: 260px;
+  padding: 0 20px;
 }
 
-.navbar-nav .nav-link.active,
-.navbar-nav .show > .nav-link {
-  color: var(--blue);
+.dropdown-toggle::after {
+  margin-left: 0.5em;
+  font-size: 12px;
+  vertical-align: middle;
+  display: inline-block;
+  content: "\f107";
+  font-weight: 900;
+  font-family: "Font Awesome 6 Free";
+  border: none;
 }
-.nav-link:focus,
-.nav-link:hover {
-  color: var(--blue);
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  padding: 20px 0;
+  border-radius: 0;
+  border: none;
+  border-top: 3px solid var(--darkPerple);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 .dropdown-item {
   padding: 15px 20px;
   padding-right: 28px;
-  border-bottom: 1px solid var(--lightGrey);
+  border-radius: 0;
+  border-bottom: none;
   text-wrap: wrap;
+  font-family: "Open Sans";
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 14px;
+  color: var(--darkPerple);
 }
-
+.nav-link {
+  color: var(--darkPerple);
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .show > .nav-link {
+  color: var(--darkPerple);
+}
+.nav-link:focus,
+.nav-link:hover {
+  color: var(--darkPerple);
+  opacity: 0.7;
+}
 
 .navbar-nav {
   gap: 20px;
 }
 .dropdown-item:focus,
 .dropdown-item:hover {
-  color: var(--blue);
-  background-color: transparent;
-}
-.dropdown-menu {
-  padding: 0;
-  border: none;
-  border-radius: 0;
-  box-shadow: none !important;
-}
-
-.btnMedium {
-  display: inline-block;
-  padding: 15px 20px;
-  background-color: var(--blue);
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 1.25;
-  text-transform: capitalize;
-  position: relative;
-}
-.btnMedium i {
-  margin-left: 5px;
-}
-.btnMedium span {
-  position: relative;
-  z-index: 1;
-}
-.btnMedium::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0%;
-  height: 100%;
-  background-color: var(--green);
-  -webkit-transition: linear 0.2s;
-  -o-transition: linear 0.2s;
-  transition: linear 0.2s;
-}
-.btnMedium::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 0%;
-  height: 100%;
-  background-color: var(--green);
-  -webkit-transition: linear 0.2s;
-  -o-transition: linear 0.2s;
-  transition: linear 0.2s;
-}
-
-.btnMedium:hover {
-  color: #ffffff;
-}
-.btnMedium:hover::after,
-.btnMedium:hover::before {
-  width: 50%;
+  color: var(--darkPerple);
+  background-color: rgba(0, 0, 0, 0.03);
+  opacity: 0.7;
 }
 
 .navbar-nav .btn-check:checked + .btn,
@@ -298,17 +268,13 @@ img {
 /* header css end */
 
 /* banner css start */
-#ca1.owl-carousel .item {
-  padding: 190px 0;
+
+#ca1.owl-carousel {
+  overflow-x: hidden;
 }
-
-
-.Banner .bannertext1 > span {
-  display: inline-block;
-  color: #ffffff;
-  margin: 0px 0px 25px 0px;
-  padding: 8px 25px 8px 25px;
-  background-color: #ffffff26;
+#ca1.owl-carousel .item {
+  padding: 240px 0;
+  background-color: red;
 }
 
 .Banner .owl-nav {
@@ -319,29 +285,36 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  padding-left: 8%;
-  padding-right: 8%;
+  padding-left: 20px;
+  padding-right: 20px;
   pointer-events: none;
 }
 .Banner .owl-nav button {
   pointer-events: initial;
+  height: 60px;
   line-height: 1.25;
   text-transform: capitalize;
-  height: 50px;
+  color: var(--BgBlack) !important;
 }
 .Banner .owl-carousel .owl-nav button.owl-prev {
-  padding: 0px 20px 0px 0px !important;
-  border-style: solid;
-  border-width: 0px 1px 0px 0px;
-  border-color: #ffffff80;
   background-color: #2a6fdd00;
+  padding: 0 15px !important;
+  font-size: 55px;
+  transform: translateX(-50px);
+  transition: transform 0.3s ease-in-out;
 }
 .Banner .owl-carousel .owl-nav button.owl-next {
-  padding: 0px 0px 0px 20px !important;
-  border-style: solid;
-  border-width: 0px 0px 0px 1px;
-  border-color: #ffffff80;
   background-color: #2a6fdd00;
+  padding: 0 15px !important;
+  font-size: 55px;
+  transform: translateX(50px);
+  transition: transform 0.3s ease-in-out;
+}
+.Banner .owl-carousel:hover .owl-nav button.owl-next {
+  transform: translateX(0px);
+}
+.Banner .owl-carousel:hover .owl-nav button.owl-prev {
+  transform: translateX(0px);
 }
 .Banner .owl-nav .owl-prev i {
   margin-right: 10px;
@@ -350,71 +323,257 @@ img {
   margin-left: 10px;
 }
 
-
-.btnLarg {
-  display: inline-block;
-  padding: 20px 35px;
-  background-color: var(--green);
-  color: #ffffff;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1.25;
-  margin-top: 30px;
-  text-transform: capitalize;
-  position: relative;
-}
-.btnLarg i {
-  margin-left: 10px;
-}
-.btnLarg span {
-  position: relative;
-  z-index: 1;
-}
-.btnLarg::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 0%;
-  height: 100%;
-  background-color: var(--blue);
-  -webkit-transition: linear 0.2s;
-  -o-transition: linear 0.2s;
-  transition: linear 0.2s;
-}
-.btnLarg::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 0%;
-  height: 100%;
-  background-color: var(--blue);
-  -webkit-transition: linear 0.2s;
-  -o-transition: linear 0.2s;
-  transition: linear 0.2s;
-}
-
-.btnLarg:hover {
-  color: #ffffff;
-}
-.btnLarg:hover::after,
-.btnLarg:hover::before {
-  width: 50.2%;
-}
-
 .container-fluid {
   max-width: 1780px;
 }
+
+.Banner .owl-dots {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.Banner .owl-dots {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
+}
+.Banner .owl-dots button.owl-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  display: inline-block;
+  background: #ffffff79;
+  margin: 4px 0px;
+}
+.Banner .owl-dots button.owl-dot.active {
+  background-color: #ffffff;
+}
+.Banner .owl-dots button.owl-dot:focus {
+  outline: none;
+}
+
+#ca1.owl-carousel .item1 {
+  padding-right: 12%;
+  background: url('../image/WhatsApp-Image-2024-08-06-at-7.16.50-PM.jpg' )  no-repeat center;
+  background-size: cover;
+}
+#ca1.owl-carousel .item2{
+  padding-left: 12%;
+  background: url('../image/WhatsApp-Image-2024-08-06-at-7.16.55-PM-1.jpeg' )  no-repeat center;
+  background-size: cover;
+}
+.bannerCard {
+  margin-left: auto;
+}
+
+.bannertext1 {
+  background-color: #ffffff;
+  border-radius: 25px;
+  padding: 30px !important;
+  color: var(--BgBlack);
+}
+.bannertext1 p {
+  margin-bottom: 0;
+}
+.bannertext1 .display-3 a {
+  color: var(--BgBlack);
+}
+
+.btnOutline {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 0.3em 1em;
+  background-color: #00000030;
+  color: #ffffff;
+  border: 2px solid;
+  border-radius: 3px;
+  border-color: #ffffff;
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  -webkit-transition-property: all !important;
+  transition-property: all !important;
+}
+.btnOutline i {
+  position: relative;
+  transform: translateX(-20px);
+  margin-left: 4px;
+  width: 0;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.btnOutline:hover{
+  color: #ffffff;
+}
+.btnOutline:hover i {
+  width: 12.6px;
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+#ca1.owl-carousel .item2 .bannerCard {
+  margin-right: auto;
+  margin-left: unset;
+}
 /* banner css end */
+
+
+
+.defaultPadding {
+padding: 50px 0;
+}
+/* Building Trust section start */
+.buildingTrust{
+  text-align: center;
+}
+.squareImg{
+  height: 100px;
+  width: 100px;
+  border-radius: 10px 10px 10px 10px;
+  border: 2px solid var(--BgBlack);
+  transition: border 300ms ease 0ms;
+  overflow: hidden;
+  margin: auto;
+  margin-bottom: 30px;
+}
+.squareImg:hover{
+  border-color: var(--green);
+}
+.squareImg img{
+  aspect-ratio: 1;
+  object-fit: cover;
+}
+.therdH a{
+  color: var(--BgBlack);
+}
+
+.buildingTrust .secH{
+  margin-bottom: 80px;
+}
+
+.buildingTrust p{
+  font-weight: 500;
+}
+
+.buildingTrust .Paramargin{
+  margin: auto;
+  margin-bottom: 85px;
+  width: 78%;
+}
+/* Building Trust section end */
+
+/* Making an Impact section start */
+
+.btnFilled{
+    color: #ffffff ;
+    border: 2px solid var(--green);
+    letter-spacing: 2px;
+    padding: 10px 18px ;
+    display: inline-block;
+    font-size: 18px;
+    font-family: "Montserrat";
+    text-transform: uppercase ;
+    background-color: #6eba01;
+    transition: color 300ms ease 0ms, background-color 300ms ease 0ms, border 300ms ease 0ms;
+}
+.btnFilled:hover{
+  background-color: #6dba0100;
+  color: var(--green) ;
+}
+.makingAnImpact .btnFilled{
+  display: table;
+  margin: auto;
+}
+.makingAnImpact {
+  position: relative;
+  background-color: var(--lightGrey);
+}
+
+.makingAnImpact .container{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+}
+.makingAnImpact  .textPart1{
+margin-top: 50px;
+margin-bottom: 50px;
+}
+.ImgPart{
+  width: 50%;
+}
+
+.secH.styledText{
+position: relative;
+padding-top: 50px;
+}
+
+.secH.styledText::after{
+content: "";
+position: absolute;
+top: 0;
+left: 50%;
+transform: translateX(-50%);
+width: 100px;
+height: 3px;
+background-color: var(--perple);
+}
+/* Making an Impact section end */
+
+/* Premium Services section start */
+.Styledpara{
+  max-width: 710px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.countCards .fifthH{
+font-weight: 500;
+}
+.countCards .display-3{
+  font-weight: 700;
+  color: var(--perple);
+}
+/* Premium Services section end */
+
+
+/* Why Choose Us section start */
+.whywChooseUs {
+  background-color: var(--lightGrey);
+}
+.whywChooseUs .squareImg{
+  height: 60px;
+  width: 60px;
+  border-radius: 0;
+  border: none;
+  margin-bottom: 30px;
+}
+.whywChooseUs .cardVerticle{
+  padding: 40px 20px;
+  border: 2px solid var(--grey);
+  transition: border 0.3s ease-in-out;
+  background-color: #ffffff;
+  height: 100%;
+}
+.whywChooseUs .cardVerticle:hover{
+  border: 2px solid var(--green);
+}
+/* Why Choose Us section end */
+
+
+
+
+
 
 
 .copyrightSection {
   background-color: var(--perple);
   padding: 15px 12px;
 }
+
 .copyrightSection p {
   margin-bottom: 0;
   color: #ffffff;
 }
-
