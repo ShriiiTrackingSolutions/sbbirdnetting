@@ -55,6 +55,7 @@
   --skyblue: #0c71c3;
   --pink: #ea2c59;
   --animate-delay: 0.5s;
+  --BGrey: #eef1f8;
 }
 
 * {
@@ -131,7 +132,9 @@ img {
 .miniheader {
   padding-top: 5px;
   padding-bottom: 5px;
-  background-color: var(--darkPerple);
+  background-image:linear-gradient(180deg,rgba(73,108,220,0.93) 100%,rgba(76,72,227,0.96) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .miniheader .col-auto a {
@@ -562,18 +565,400 @@ font-weight: 500;
 }
 /* Why Choose Us section end */
 
+/* Our Work Gallery section start */
+.imgHoverOverlay img{
+ aspect-ratio: 1;
+ object-fit: cover;
+}
+.imgHoverOverlay{
+  position: relative;
+}
+.overlayLink{
+  position: absolute;
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  background-color: #000000ad;
+  transition: opacity 0.3s;
+}
+
+.imgHoverOverlay::after{
+content: "\f178";
+font-weight: 900;
+font-family: "Font Awesome 6 Free";
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 1;
+font-size: 32px;
+color: #ffffff;
+transition: all 0.3s;
+opacity: 0;
+pointer-events: none;
+}
+
+.imgHoverOverlay:hover .overlayLink{
+opacity: 1;
+}
+.imgHoverOverlay:hover::after{
+  opacity: 1;
+} 
+.ourWorkGallery .btnFilled{
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+}
+/* Our Work Gallery section end */
+
+/* Our Testimonials section start */
+.ourTestimonials{
+
+}
+
+.testimonialCard {
+  position: relative;
+  padding: 30px;
+  background-color: var(--lightGrey);
+  border: 2px solid var(--skyblue);
+  transition:border-color 0.3s ;
+}
+.testimonialCard::after {
+  content: "\f10e";
+  height: 32px;
+  width: 32px;
+  top: -16px;
+  transform: translateX(-16px);
+  padding-top: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  font-weight: 900;
+  color: var(--skyblue);
+  font-family: "Font Awesome 6 Free";
+  font-size: 24px;
+  left: 50%;
+  border: 2px solid var(--skyblue);
+  background: #f5f5f5;
+  border-radius: 31px;
+  z-index: 2;
+}
+.testimonialCard:hover{
+  border-color: var(--green);
+}
+.userAvatar{
+  height: 90px;
+  width: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, .3);
+    box-shadow: inset 0 0 3px rgba(0, 0, 0, .3);
+}
+.userAvatar img{
+  position: relative;
+  z-index: -1;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center;
+}
+.testimonialCard .userDisc{
+width: calc(100% - 120px);
+}
+.testimonialCard .row{
+  justify-content: space-between;
+  isolation: isolate;
+}
+.userName{
+  display: block;
+  margin-top: 32px;
+  font-size: 14px;
+  font-weight: 700;
+}
+/* Our Testimonials section end */
 
 
 
+/* Footer section start  */
 
+.footer {
+  background: linear-gradient(180deg,rgba(76,72,227,0.96) 0%,rgba(73,108,220,0.93) 100%);
+  background-color: #fff;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+.footer.defaultPadding{
+  padding: 80px 0;
+}
+.footer .footer-brand{
+  display: inline-block;
+  width: 60%;
+  min-width: 150px;
+  margin-bottom: 30px;
+}
+.footer .secH{
+  color: #ffffff;
+  text-align: left;
+  margin-bottom: 32px;
+}
+.footer .container>.row{
+  justify-content: space-between;
+}
+.exploreLinks a i{
+  margin-right: 20px;
+  font-size: 18px;
+  color: var(--green);
+}
+.footer ul {
+  list-style: none;
+  padding: 0;
+}
+.footer ul li {
+  margin-bottom: 10px;
+}
+.footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+.footer ul li a:hover {
+  color: var(--green);
+}
+.footer .contact-info i {
+  color: var(--green);
+  font-size: 20px;
+  margin-right: 10px;
+}
+.locationLink{
+  display: inline-block;
+  position: relative;
+  padding-left: 22px;
+}
+.locationLink i{
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+.footer .social-icons{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.footer .social-icons a {
+  display: flex;
+  height: 38px;
+  width: 38px;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 17px;
+  margin-right: 15px;
+}
+.footer .social-icons a:hover {
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, .3);
+}
 
+.footer .social-icons .facebook{
+  background-color: #0C71C3;
+}
+.footer .social-icons .instagram{
+  background-color: #ea2c59;
+}
+.footer .social-icons .whatsapp{
+  background-color: #25D366;
+}
 
 .copyrightSection {
-  background-color: var(--perple);
+  background-color: var(--blue);
   padding: 15px 12px;
 }
 
 .copyrightSection p {
   margin-bottom: 0;
   color: #ffffff;
+}
+
+
+
+/*****************
+*** About Page ***
+******************/
+.PageBanner{
+  background: linear-gradient(180deg,rgba(58,52,226,0.93) 0%,rgba(73,108,220,0.7) 100%), url('../image/business-07.jpg');
+  background-repeat: no-repeat,no-repeat;
+  background-size: cover,cover;
+  padding: 80px 0;
+}
+
+.PageBanner .display-3{
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 84px;
+  color: #ffffff;
+}
+.PageBanner .therdH{
+  color: #ffffff;
+}
+.aboutPage0.makingAnImpact .display-3{
+  font-weight: 700;
+  color: var(--perple);
+}
+.ProductHighlight{
+  max-width: 355px;
+  text-align: left;
+  margin: auto;
+  margin-top: 10px;
+}
+.ProductHighlight i{
+  color: var(--green);
+  margin-right: 5px;
+}
+.aboutPage0.makingAnImpact .ProductHighlight:first-of-type{
+margin-top: 40px ;
+}
+
+/* Best Invisble Grill Solution section start */
+.bestInvisbleGrill .secH{
+  font-family: "Open Sans";
+}
+span.fifthH{
+  display: block;
+  margin: auto;
+  color: var(--perple);
+  margin-bottom: 40px;
+}
+.cardlogo{
+  height: 110px;
+  width: 110px;
+  overflow: hidden;
+}
+.textPart2{
+  padding-left: 20px;
+}
+.textPart2 .fifthH{
+text-align: left;
+color: var(--perple);
+}
+/* Best Invisble Grill Solution section end */
+
+.whywChooseUs.aboutPage0{
+  background-color: #eef1f8;
+}
+
+
+
+/*******************
+*** contact Page ***
+********************/
+
+.messageHi{
+  position: relative;
+  display: inline-block;
+  padding: 15px 20px;
+  background-color: var(--perple);
+  color: #ffffff;
+  border-radius: 50px;
+}
+.messageHi::after{
+position: absolute;
+content: "";
+top: 99%;
+right: 30px;
+height: 20px ;
+width: 30px;
+background-color: var(--perple);
+clip-path: polygon(18% 0, 0 97%, 100% 0);
+}
+
+
+.contactCardWrap {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 50px;
+}
+.ContactForm textarea{
+  resize: none;
+}
+.contactCard {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+.contactCard .PosAbsol {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.contactContent {
+  width: calc(100% - 65px);
+}
+.contactContent p,
+.contactContent address {
+  margin-bottom: 0;
+  color: var(--grey);
+}
+.contactIcon {
+  height: 40px;
+  width: 40px;
+  font-size: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: var(--green);
+  transition: color 0.3s;
+}
+
+.contactCard:hover .contactIcon {
+  color: var(--perple);
+}
+
+.contactCardWrap .fifthH{
+  text-align: left;
+}
+
+.sendUsMessage{
+  background: linear-gradient(90deg, #eef1f8 50%, #ffffff 50%);
+}
+.sendUsMessage .container>.row{
+  align-items: center;
+}
+.ContactForm .btnOutline{
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--green);
+  padding: 15px 30px;
+  border-radius: 50px;
+}
+.ContactForm .btnOutline:hover{
+  background-color: var(--skyblue);
+}
+
+.ContactForm input,.ContactForm textarea{
+padding: 16px;
+border: 3px solid var(--green);
+border-radius: 4px;
+background-color: var(--BGrey);
+font-size: 14px;
+font-weight: 600;
+}
+
+.form-control:focus {
+  border-color: var(--green);
+  background-color: var(--BGrey);
+  box-shadow:none;
+}
+
+.MapSection{
+  background: linear-gradient(180deg,rgba(58,52,226,0.93) 0%,rgba(73,108,220,0.7) 100%);
 }
