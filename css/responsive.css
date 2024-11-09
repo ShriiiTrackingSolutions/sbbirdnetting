@@ -37,6 +37,14 @@
   background: none;
 }
 
+#ca1.owl-carousel .item1 {
+  padding-left: 70px;
+  padding-right: 70px;
+}
+#ca1.owl-carousel .item2 {
+  padding-left: 70px;
+  padding-right: 70px;
+}
 
  }
 
@@ -163,6 +171,29 @@ text-align: left;
     margin-top: 24px;
     padding: 0 12px;
   }
+
+  #ca1.owl-carousel .item {
+    padding: 50px 30px;
+    background-color: red;
+}
+#ca1.owl-carousel .item1 {
+  background: url('../image/GalleryImage1.jpeg') no-repeat center;
+  background-size: cover;
+  overflow: hidden;
+}
+#ca1.owl-carousel .item2 {
+  background: url('../image/WhatsApp-Image-2024-08-06-at-7.03.27-PM.jpg') no-repeat center;
+  background-size: cover;
+}
+.bannertext1 {
+  background-color: #00000f80;
+  border-radius: 25px;
+  padding: 30px !important;
+  color: #ffffff;
+}
+.bannertext1 .display-3 a {
+  color: #ffffff;
+}
 
  }
 
