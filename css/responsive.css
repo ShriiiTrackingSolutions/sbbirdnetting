@@ -36,6 +36,8 @@
 .sendUsMessage{
   background: none;
 }
+
+
  }
 
 @media (max-width: 991.98px) { 
@@ -50,6 +52,37 @@
 }
 .whywChooseUs .container>.row{
   row-gap: 24px;
+}
+
+
+.sidemenu{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.sidemenu .HedSmall,.list-group_anchor{
+  width: 33.33333333%;
+  font-size: 12px;
+  padding:12px;
+  align-self: stretch;
+}
+.sidemenu .list-group{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+.sidemenu .list-group-item{
+  display: inline-block;
+  width: 33.33333333%;
+  align-self: stretch;
+  font-size: 12px;
+  padding:12px
+}
+.spyList .sidemenu{
+  position: sticky;
+  top: 86.4px;
 }
 
  }
