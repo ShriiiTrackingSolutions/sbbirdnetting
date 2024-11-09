@@ -84,6 +84,11 @@
   position: sticky;
   top: 86.4px;
 }
+.list-group_anchor:hover span,
+.spyList .list-group-item:hover span {
+  transform: translateX(0);
+  color: #ffffff;
+}
 
  }
 
