@@ -1021,6 +1021,9 @@ span.fifthH {
   letter-spacing: 1px;
   line-height: 1.6em;
 }
+.spyList {
+  margin-top: 50px;
+}
 .spyList .sidemenu {
   text-align: center;
 }
@@ -1131,6 +1134,9 @@ span.fifthH {
   padding-bottom: 50px;
   border-bottom: 2px solid var(--skyblue);
   margin-bottom: 40px;
+}
+.serviceDesc .fifthH{
+  text-transform: uppercase;
 }
 
 .serviceDesc:last-child{
