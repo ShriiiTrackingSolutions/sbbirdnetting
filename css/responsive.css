@@ -3,6 +3,9 @@
 
 @media (max-width: 1399.98px) {
     
+  .bannertext1 .display-3 a{
+    font-size: 100px;
+  }
     
  }
 
@@ -19,6 +22,10 @@
 .display-3 {
   font-size: 60px;
 }
+.bannertext1 .display-3 a{
+  font-size: 80px;
+}
+  
 .secH {
   font-size: 36px;
 }
@@ -97,6 +104,9 @@
   transform: translateX(0);
   color: #ffffff;
 }
+.bannertext1 .display-3 a{
+  font-size: 70px;
+}
 
  }
 
@@ -109,6 +119,10 @@
 
 @media (max-width: 767.98px) {
 
+  .bannertext1 .display-3 a{
+    font-size: 45px;
+  }
+  
 .display-3 {
   font-size: 32px;
 }
@@ -164,6 +178,9 @@ text-align: left;
     align-items: center;
     text-align: center;
   }
+  .Banner .owl-nav{
+    display: none;
+  }
   .bestInvisbleGrill  .cardWrap .fifthH{
     text-align: center;
   }
@@ -191,6 +208,10 @@ text-align: left;
   padding: 30px !important;
   color: #ffffff;
 }
+.bannertext1 .display-3 a{
+  font-size: 42px;
+}
+
 .bannertext1 .display-3 a {
   color: #ffffff;
 }

@@ -292,37 +292,38 @@ img {
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  padding-left: 20px;
-  padding-right: 20px;
   pointer-events: none;
 }
 .Banner .owl-nav button {
   pointer-events: initial;
-  height: 60px;
+  height: 57px;
+  width: 60px;
+  background-color: var(--skyblue) !important;
   line-height: 1.25;
   text-transform: capitalize;
-  color: var(--BgBlack) !important;
+  color: var(--lightGrey) !important;
+}
+.Banner .owl-nav button:hover{
+  background-color: var(--green) !important;
+}
+.Banner .owl-nav button span{
+  display: inline-block;
+  transform: translateY(-4px);
 }
 .Banner .owl-carousel .owl-nav button.owl-prev {
-  background-color: #2a6fdd00;
+ 
   padding: 0 15px !important;
   font-size: 55px;
-  transform: translateX(-50px);
   transition: transform 0.3s ease-in-out;
 }
+
 .Banner .owl-carousel .owl-nav button.owl-next {
-  background-color: #2a6fdd00;
+ 
   padding: 0 15px !important;
   font-size: 55px;
-  transform: translateX(50px);
   transition: transform 0.3s ease-in-out;
 }
-.Banner .owl-carousel:hover .owl-nav button.owl-next {
-  transform: translateX(0px);
-}
-.Banner .owl-carousel:hover .owl-nav button.owl-prev {
-  transform: translateX(0px);
-}
+
 .Banner .owl-nav .owl-prev i {
   margin-right: 10px;
 }
@@ -362,32 +363,66 @@ img {
 }
 
 #ca1.owl-carousel .item1 {
-  padding-right: 12%;
-  background: url("../image/WhatsApp-Image-2024-08-06-at-7.16.50-PM.jpg")
+  
+  background: linear-gradient(#00000073, #00000073), url("../image/WhatsApp-Image-2024-08-06-at-7.16.50-PM.jpg")
     no-repeat center;
-  background-size: cover;
+    background-size: cover, cover;
+    animation-name: image-zoom;
+    animation-duration: 10s;
+    animation-delay: 1s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    transition: 0.5s;
+ 
 }
+
+@keyframes image-zoom {
+  0%  { 
+    background-size: 100% 100%; 
+    }
+
+  25% {
+    background-size: 115% 115%; 
+  }
+
+  50% { background-size: 130% 130%;  }
+
+  75% { background-size: 115% 115%;}
+
+  100% { background-size: 100% 100%; }
+}
+
+
+
+
+
 #ca1.owl-carousel .item2 {
-  padding-left: 12%;
-  background: url("../image/WhatsApp-Image-2024-08-06-at-7.16.55-PM-1.jpeg")
+  background:linear-gradient(#00000073, #00000073), url("../image/bird-protection-nets-1000x1000.webp")
     no-repeat center;
-  background-size: cover;
+  background-size: cover, cover;
+  background-size: cover, cover;
+  animation-name: image-zoom;
+  animation-duration: 10s;
+  animation-delay: 1s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  transition: 0.5s;
 }
 .bannerCard {
-  margin-left: auto;
+  margin: auto;
 }
 
 .bannertext1 {
-  background-color: #ffffff;
   border-radius: 25px;
   padding: 30px !important;
-  color: var(--BgBlack);
 }
 .bannertext1 p {
   margin-bottom: 0;
+  color: #ffffff;
 }
 .bannertext1 .display-3 a {
-  color: var(--BgBlack);
+  font-size: 120px;
+  color: #ffffff;
 }
 
 .btnOutline {
@@ -422,9 +457,26 @@ img {
 }
 
 #ca1.owl-carousel .item2 .bannerCard {
-  margin-right: auto;
-  margin-left: unset;
+  margin: auto;
 }
+
+/* whatsapp fab */
+.fab-container {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.Call-fab-container{
+  position: fixed;
+  bottom: 110px;
+  right: 50px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
 /* banner css end */
 
 .defaultPadding {
