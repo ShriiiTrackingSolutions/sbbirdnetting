@@ -471,7 +471,7 @@ img {
 
 .Call-fab-container{
   position: fixed;
-  bottom: 110px;
+  bottom: 120px;
   right: 50px;
   cursor: pointer;
   z-index: 1000;
