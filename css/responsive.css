@@ -108,6 +108,10 @@
   font-size: 70px;
 }
 
+.ourTestimonials .container>.row {
+row-gap: 50px;
+}
+
  }
 
  @media screen and (max-width: 912px) {
@@ -142,6 +146,12 @@
 .footer.defaultPadding{
   padding: 34px 0;
 }
+.locationLink{
+max-width: 280px;
+}
+.BlockView{
+  display: block;
+}
 .footer .secH{
   text-align: center;
   margin-bottom: 24px;
@@ -159,7 +169,7 @@ text-align: left;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  row-gap: 24px;
+  row-gap: 24px !important;
 }
 .testimonialCard .userDisc {
   width: 100%;
@@ -178,9 +188,7 @@ text-align: left;
     align-items: center;
     text-align: center;
   }
-  .Banner .owl-nav{
-    display: none;
-  }
+
   .bestInvisbleGrill  .cardWrap .fifthH{
     text-align: center;
   }
@@ -191,20 +199,52 @@ text-align: left;
 
   #ca1.owl-carousel .item {
     padding: 50px 30px;
-    background-color: red;
+    height: 700px;
 }
 #ca1.owl-carousel .item1 {
-  background: url('../image/GalleryImage1.jpeg') no-repeat center;
   background-size: cover;
   overflow: hidden;
 }
 #ca1.owl-carousel .item2 {
-  background: url('../image/WhatsApp-Image-2024-08-06-at-7.03.27-PM.jpg') no-repeat center;
   background-size: cover;
 }
+
+
+
+#ca1.owl-carousel .bannerCard  {
+margin: auto;
+margin-top: 30% !important;
+}
+
+@keyframes image-zoom {
+  0%  { 
+    background-size: auto 100%; 
+    }
+
+  25% {
+    background-size: auto 115%; 
+  }
+
+  50% { background-size: auto 130%;  }
+
+  75% { background-size: auto 115%;}
+
+  100% { background-size: auto 100%; }
+}
+
+
+.Banner .owl-nav button {
+  pointer-events: initial;
+  height: 40px;
+  width: 44px;
+  background-color: var(--skyblue) !important;
+  line-height: 1.25;
+  text-transform: capitalize;
+  color: var(--lightGrey) !important;
+}
+
+
 .bannertext1 {
-  background-color: #00000f80;
-  border-radius: 25px;
   padding: 30px !important;
   color: #ffffff;
 }

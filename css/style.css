@@ -463,16 +463,16 @@ img {
 /* whatsapp fab */
 .fab-container {
   position: fixed;
-  bottom: 50px;
-  right: 50px;
+  bottom: 24px;
+  right: 24px;
   cursor: pointer;
   z-index: 1000;
 }
 
 .Call-fab-container{
   position: fixed;
-  bottom: 120px;
-  right: 50px;
+  bottom: 94px;
+  right: 24px;
   cursor: pointer;
   z-index: 1000;
 }
@@ -672,8 +672,6 @@ img {
 /* Our Work Gallery section end */
 
 /* Our Testimonials section start */
-.ourTestimonials {
-}
 
 .testimonialCard {
   position: relative;
@@ -839,6 +837,9 @@ img {
 .copyrightSection p {
   margin-bottom: 0;
   color: #ffffff;
+}
+.BlockView a{
+  color: #4ce986;
 }
 
 /*****************
