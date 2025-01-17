@@ -333,7 +333,7 @@
 
     <!-- Call FAB icon -->
     <div class="Call-fab-container">
-      <a class="set-url-target" rel="noopener" data-mobile-target="" data-desktop-target="_blank" target="_blank" href="tel:+91 9081062820"><span class="sr-only">Call</span>
+      <a  rel="noopener" target="_blank" href="tel:+91 9081062820"><span class="sr-only">Call</span>
         <img style="height: 60px; width: 60px;" src="image/phone-call.png" alt="phone icon">
       </a>
   </div>
@@ -398,33 +398,30 @@
     <script src="js/owl.carousel.js"></script>
     <script src="js/script.js"></script>
     <script>
-      //  Header script
-
-      window.addEventListener("scroll", function () {
+      // Header Script 
+      // Debounce function to limit how often the event handler executes
+      function debounce(func, delay) {
+        let timeout;
+        return function (...args) {
+          clearTimeout(timeout);
+          timeout = setTimeout(() => func.apply(this, args), delay);
+        };
+      }
+    
+      // Header scroll handler
+      function handleScroll() {
         const header = document.getElementById("main-header");
         const headerOffset = header.offsetTop;
         const headerHeight = header.offsetHeight;
         const belowContent = document.getElementById("headBelowContent");
         const belowContentOffset = belowContent.offsetTop;
         const belowContentHeight = belowContent.offsetHeight;
-
+    
         if (window.pageYOffset > headerOffset + headerHeight + 5) {
           header.classList.add("sticky-header", "visible");
           header.classList.remove("headerAnimate");
-          if (window.matchMedia("(max-device-width:991.98px)").matches) {
-            document
-              .getElementById("navbarSupportedContent")
-              .setAttribute(
-                "style",
-                "max-height: calc(100vh - 112px); overflow-y: auto;"
-              );
-          } else {
-            if (window.matchMedia("(max-device-width:1199.98px)").matches) {
-              document
-                .getElementById("navbarSupportedContent")
-                .setAttribute("style", "");
-            }
-          }
+    
+          applyNavbarStyles();
         } else {
           if (
             window.pageYOffset <
@@ -434,6 +431,35 @@
             header.classList.add("headerAnimate");
           }
         }
+      }
+    
+      // Function to handle navbar styles based on layout
+      function applyNavbarStyles() {
+        const navbar = document.getElementById("navbarSupportedContent");
+    
+        if (window.matchMedia("(max-device-width: 991.98px)").matches) {
+          navbar.setAttribute(
+            "style",
+            "max-height: calc(100vh - 112px); overflow-y: auto;"
+          );
+        } else if (window.matchMedia("(max-device-width: 1199.98px)").matches) {
+          navbar.setAttribute("style", "");
+        } else {
+          navbar.setAttribute("style", "");
+        }
+      }
+    
+      // Attach debounced scroll and resize events
+      const debouncedHandleScroll = debounce(handleScroll, 0);
+      const debouncedApplyNavbarStyles = debounce(applyNavbarStyles, 0);
+    
+      window.addEventListener("scroll", debouncedHandleScroll);
+      window.addEventListener("resize", debouncedApplyNavbarStyles);
+    
+      // Run once on page load to ensure styles are applied correctly
+      window.addEventListener("load", () => {
+        debouncedApplyNavbarStyles();
+        debouncedHandleScroll();
       });
     </script>
 
